@@ -81,7 +81,7 @@ exports.login = async (req, res) => {
     }
 
     const token = generateToken(user);
-
+    
     const { password: pwd, ...others } = user.toObject();
 
     res.status(200).json({
